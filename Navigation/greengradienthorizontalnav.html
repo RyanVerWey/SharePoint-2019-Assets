@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Horizontal Nav Menu</title>
+    <style>
+        .horizontal-menu {
+            background: linear-gradient(to left, rgb(17, 17, 17), rgb(6, 128, 6));
+            font-family: sans-serif;
+            font-weight: 600;
+            display: flex;
+            overflow: hidden;
+            border-radius: 8px;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 3vh;
+        }
+
+        .horizontal-menu ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .horizontal-menu a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+        }
+
+        .horizontal-menu-drop {
+            float: left;
+            overflow: hidden;
+        }
+
+        .horizontal-menu-drop-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(57, 57, 57);
+            min-width: 160px;
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        .horizontal-menu-drop-content li a {
+            padding: 12px 18px;
+            text-decoration: none;
+            display: block;
+            color: white;
+            text-align: left;
+        }
+
+        .horizontal-menu-drop:hover .horizontal-menu-drop-content {
+            display: block;
+        }
+
+        .horizontal-menu a:hover,
+        .horizontal-menu-drop-content li a:hover {
+            background-color: rgb(0, 77, 0);
+            border-radius: 8px;
+        }
+
+        .horizontal-menu a:active {
+            transform: translateY(2px);
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Green Gradient Horizontal Nav Menu</h1>
+
+    <nav class="horizontal-menu">
+        <div class="horizontal-menu-drop">
+            <a href="#">Home</a>
+        </div>
+        <div class="horizontal-menu-drop">
+            <a href="#">About</a>
+            <div class="horizontal-menu-drop-content">
+                <ul>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">The Team</a></li>
+                    <li><a href="#">Our Vision</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-menu-drop">
+            <a href="#">Services</a>
+            <div class="horizontal-menu-drop-content">
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">SEO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-menu-drop">
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+</body>
+
+</html>
