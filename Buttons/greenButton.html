@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Tabs</title>
+    <style>
+        .xcalBtn-Container {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 2%;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .xcalBtn, .xcalABtn {
+            align-items: center;
+            background: linear-gradient(to left, rgb(17, 17, 17), rgb(6, 128, 6));
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            height: 30px;
+            width: 250px;
+            max-width: 350px;
+            max-height: 60px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none; /* Ensures text decoration does not affect the button */
+            display: inline-flex; /* Aligns the text properly */
+            align-items: center; /* Centers the text vertically */
+            justify-content: center; /* Centers the text horizontally */
+        }
+
+        .xcalBtn {
+            background: linear-gradient(to left, rgb(17, 17, 17), rgb(6, 128, 6));
+        }
+
+        .xcalBtn:hover {
+            background: linear-gradient(to right, rgb(6, 128, 6), rgb(17, 17, 17));
+            transform: translateY(1px);
+        }
+
+        .xcalBtn:active {
+            background: linear-gradient(to right, rgb(4, 118, 144), rgb(17, 17, 17));
+            transform: translateY(-1px);
+        }
+
+        .xcalABtn {
+            background: linear-gradient(to left, rgb(17, 17, 17), rgb(4, 118, 144));
+        }
+
+        .xcalABtn:hover {
+            background: linear-gradient(to right, rgb(6, 128, 6), rgb(17, 17, 17));
+            transform: translateY(1px);
+        }
+
+        .xcalABtn:active {
+            background: linear-gradient(to right, rgb(4, 118, 144), rgb(17, 17, 17));
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+How to Use
+1. Copy button start through button end and paste once for every button required.
+2. Update href to the URL you want the button to navigate to.
+3. Change the class to xcalABtn for buttons you want to have an accent color.
+4. Change button text before the closing </a> tag.
+-->
+
+    <div class="xcalBtn-Container">
+        <!-- Button Start -->
+        <a href="#" class="xcalBtn">Button</a>
+        <!-- Button End -->
+        <!-- Button Start -->
+        <a href="#" class="xcalBtn">Button</a>
+        <!-- Button End -->
+    </div>
+</body>
+</html>
