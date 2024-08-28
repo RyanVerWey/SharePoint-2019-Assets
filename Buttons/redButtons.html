@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Buttons</title>
+    <style>
+        .xSAbtn-Container {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 2%;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .xSAbtn {
+            align-items: center;
+            background: linear-gradient(to left, rgb(17, 17, 17), rgb(220, 6, 6));
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            height: 50px;
+            width: 250px;
+            max-width: 300px;
+            max-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            /* Ensure text decoration does not affect the button */
+        }
+
+        .xSAbtn:hover {
+            background: linear-gradient(to left, rgb(220, 6, 6), rgb(17, 17, 17));
+            transform: translateY(-1px);
+        }
+
+        .xSAbtn:active {
+            background: linear-gradient(to right, rgb(164, 130, 6), rgb(17, 17, 17));
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+How to Use
+1. Copy button start through button end and paste once for every button required.
+2. Update href to the URL you want the button to navigate to.
+3. Change the class to xcalABtn for buttons you want to have an accent color.
+4. Change button text before the closing </a> tag.
+-->
+    <div class="xSAbtn-Container">
+        <!-- Button Start -->
+        <a href="#" class="xSAbtn">Primary Button</a>
+        <!-- Button End -->
+        <!-- Button Start -->
+        <a href="#" class="xSAbtn">Primary Button</a>
+        <!-- Button End -->
+        <!-- Button Start -->
+        <a href="#" class="xSAbtn">Primary Button</a>
+        <!-- Button End -->
+    </div>
+</body>
+
+</html>
