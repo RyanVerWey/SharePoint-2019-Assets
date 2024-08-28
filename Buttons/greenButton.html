@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Tabs</title>
     <style>
-        .xcalBtn-Container {
+        .xBtn-Container {
             display: flex;
             align-items: center;
             flex-direction: row;
@@ -15,7 +15,7 @@
             flex-wrap: wrap;
         }
 
-        .xcalBtn, .xcalABtn {
+        .xBtn, .xABtn {
             align-items: center;
             background: linear-gradient(to left, rgb(17, 17, 17), rgb(6, 128, 6));
             color: white;
@@ -38,30 +38,30 @@
             justify-content: center; /* Centers the text horizontally */
         }
 
-        .xcalBtn {
+        .xBtn {
             background: linear-gradient(to left, rgb(17, 17, 17), rgb(6, 128, 6));
         }
 
-        .xcalBtn:hover {
+        .xBtn:hover {
             background: linear-gradient(to right, rgb(6, 128, 6), rgb(17, 17, 17));
             transform: translateY(1px);
         }
 
-        .xcalBtn:active {
+        .xBtn:active {
             background: linear-gradient(to right, rgb(4, 118, 144), rgb(17, 17, 17));
             transform: translateY(-1px);
         }
 
-        .xcalABtn {
+        .xABtn {
             background: linear-gradient(to left, rgb(17, 17, 17), rgb(4, 118, 144));
         }
 
-        .xcalABtn:hover {
+        .xABtn:hover {
             background: linear-gradient(to right, rgb(6, 128, 6), rgb(17, 17, 17));
             transform: translateY(1px);
         }
 
-        .xcalABtn:active {
+        .xABtn:active {
             background: linear-gradient(to right, rgb(4, 118, 144), rgb(17, 17, 17));
             transform: translateY(-1px);
         }
@@ -77,12 +77,12 @@ How to Use
 4. Change button text before the closing </a> tag.
 -->
 
-    <div class="xcalBtn-Container">
+    <div class="xBtn-Container">
         <!-- Button Start -->
-        <a href="#" class="xcalBtn">Button</a>
+        <a href="#" class="xBtn">Button</a>
         <!-- Button End -->
         <!-- Button Start -->
-        <a href="#" class="xcalBtn">Button</a>
+        <a href="#" class="xABtn">Accent Button</a>
         <!-- Button End -->
     </div>
 </body>
