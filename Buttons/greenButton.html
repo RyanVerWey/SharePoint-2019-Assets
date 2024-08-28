@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,8 @@
             flex-wrap: wrap;
         }
 
-        .xBtn, .xABtn {
+        .xBtn,
+        .xABtn {
             align-items: center;
             background: linear-gradient(to left, rgb(17, 17, 17), rgb(6, 128, 6));
             color: white;
@@ -32,35 +34,41 @@
             border-top-right-radius: 20px;
             overflow: hidden;
             text-align: center;
-            text-decoration: none; /* Ensures text decoration does not affect the button */
-            display: inline-flex; /* Aligns the text properly */
-            align-items: center; /* Centers the text vertically */
-            justify-content: center; /* Centers the text horizontally */
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
+        /*Primary Button*/
         .xBtn {
             background: linear-gradient(to left, rgb(17, 17, 17), rgb(6, 128, 6));
         }
 
+        /*Primary Button Hover*/
         .xBtn:hover {
             background: linear-gradient(to right, rgb(6, 128, 6), rgb(17, 17, 17));
             transform: translateY(1px);
         }
 
+        /*Primary Button Pressed*/
         .xBtn:active {
             background: linear-gradient(to right, rgb(4, 118, 144), rgb(17, 17, 17));
             transform: translateY(-1px);
         }
 
+        /*Accent Button*/
         .xABtn {
             background: linear-gradient(to left, rgb(17, 17, 17), rgb(4, 118, 144));
         }
 
+        /*Accent Button Hover*/
         .xABtn:hover {
             background: linear-gradient(to right, rgb(6, 128, 6), rgb(17, 17, 17));
             transform: translateY(1px);
         }
 
+        /*Accent Button Pressed*/
         .xABtn:active {
             background: linear-gradient(to right, rgb(4, 118, 144), rgb(17, 17, 17));
             transform: translateY(-1px);
@@ -86,4 +94,5 @@ How to Use
         <!-- Button End -->
     </div>
 </body>
+
 </html>
