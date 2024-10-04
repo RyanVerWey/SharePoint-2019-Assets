@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <style>
+        .SP-world-clock {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            align-items: center; 
+            background-color: black; 
+            height: auto; 
+        }
+
+        .SP-clock {
+            background-color: black;
+            padding: 5px;
+            text-align: center;
+            color: white;
+            width: 15%;
+        }
+
+        .SP-clock h2 {
+            font-size: 0.9rem;
+            margin: 0;
+            color: rgb(255, 255, 255);
+            padding-bottom: 2px;
+        }
+
+        .SP-time {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: red;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .SP-clock {
+                width: 25%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .SP-clock {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="SP-world-clock">
+        <div class="SP-clock">
+            <h2>Tampa (EST)</h2>
+            <p class="SP-time" id="SP-time-tampa">00:00:00</p>
+        </div>
+        <div class="SP-clock">
+            <h2>Zulu (UTC)</h2>
+            <p class="SP-time" id="SP-time-zulu">00:00:00</p>
+        </div>
+        <div class="SP-clock">
+            <h2>Germany (CET)</h2>
+            <p class="SP-time" id="SP-time-germany">00:00:00</p>
+        </div>
+        <div class="SP-clock">
+            <h2>Djibouti (EAT)</h2>
+            <p class="SP-time" id="SP-time-djibouti">00:00:00</p>
+        </div>
+        <div class="SP-clock">
+            <h2>Dubai (GST)</h2>
+            <p class="SP-time" id="SP-time-dubai">00:00:00</p>
+        </div>
+        <div class="SP-clock">
+            <h2>Iran (IRST)</h2>
+            <p class="SP-time" id="SP-time-iran">00:00:00</p>
+        </div>
+        <div class="SP-clock">
+            <h2>Pakistan (PKT)</h2>
+            <p class="SP-time" id="SP-time-pakistan">00:00:00</p>
+        </div>
+    </div>
+
+
+    <script>
+        // Function to calculate the local time and handle DST
+        function updateTime() {
+            const now = new Date();
+
+            // Tampa (Eastern Time - EST)
+            let tampaTime = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/New_York',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).format(now);
+            document.getElementById('SP-time-tampa').textContent = tampaTime;
+
+            // Zulu (UTC)
+            let zuluTime = new Intl.DateTimeFormat('en-GB', {
+                timeZone: 'Etc/UTC',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).format(now);
+            document.getElementById('SP-time-zulu').textContent = zuluTime;
+
+            // Germany (CET)
+            let germanyTime = new Intl.DateTimeFormat('de-DE', {
+                timeZone: 'Europe/Berlin',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).format(now);
+            document.getElementById('SP-time-germany').textContent = germanyTime;
+
+            // Djibouti (EAT - East Africa Time)
+            let djiboutiTime = new Intl.DateTimeFormat('en-DJ', {
+                timeZone: 'Africa/Djibouti',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).format(now);
+            document.getElementById('SP-time-djibouti').textContent = djiboutiTime;
+
+            // Dubai (Gulf Standard Time - GST)
+            let dubaiTime = new Intl.DateTimeFormat('en-AE', {
+                timeZone: 'Asia/Dubai',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).format(now);
+            document.getElementById('SP-time-dubai').textContent = dubaiTime;
+
+            // Iran (Iran Standard Time - IRST) using English numbers
+            let iranTime = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'Asia/Tehran',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).format(now);
+            document.getElementById('SP-time-iran').textContent = iranTime;
+
+            // Pakistan (Pakistan Standard Time - PKT)
+            let pakistanTime = new Intl.DateTimeFormat('en-PK', {
+                timeZone: 'Asia/Karachi',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).format(now);
+            document.getElementById('SP-time-pakistan').textContent = pakistanTime;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+
+    </script>
+</body>
+
+</html>
