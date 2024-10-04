@@ -4,7 +4,11 @@
 This **World Clock** allows users to view multiple time zones at once, with automatic adjustment for Daylight Saving Time. The code for the clock is written in HTML, CSS, and JavaScript, all contained in a single file for simplicity.
 
 ---
+## Preview
 
+![World Clock Preview](https://github.com/RyanVerWey/SharePoint-2019-Assets/blob/main/World%20Clock/WorldClockPreview.PNG?raw=true)
+
+---
 ## Instructions
 
 ### 1. **File Structure**
