@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <style>
+    .cdtimer {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      flex-direction: column;
+    }
+
+    #countdown {
+      text-align: center;
+      background: #333;
+      color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      /* Adjust width to be responsive */
+      max-width: 600px;
+      /* Maximum width */
+    }
+
+    #timer span {
+      font-size: 2rem;
+      padding: 0 10px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="countdown">
+    <h1 class="h1">Transition Countdown</h1>
+    <p id="timer">
+      <span id="days">00</span>d :
+      <span id="hours">00</span>h :
+      <span id="minutes">00</span>m :
+      <span id="seconds">00</span>s
+    </p>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function countdown() {
+      const countToDate = new Date('2025-07-30T23:59:59').getTime();
+      const now = new Date().getTime();
+      const difference = countToDate - now;
+
+      const seconds = 1000;
+      const minutes = seconds * 60;
+      const hours = minutes * 60;
+      const days = hours * 24;
+
+      let timeDays = Math.floor(difference / days);
+      let timeHours = Math.floor((difference % days) / hours);
+      let timeMinutes = Math.floor((difference % hours) / minutes);
+      let timeSeconds = Math.floor((difference % minutes) / seconds);
+
+      document.getElementById('days').innerText = timeDays;
+      document.getElementById('hours').innerText = timeHours;
+      document.getElementById('minutes').innerText = timeMinutes;
+      document.getElementById('seconds').innerText = timeSeconds;
+
+      if (difference < 0) {
+        clearInterval(timer);
+        document.getElementById('timer').innerHTML = 'Countdown finished';
+      }
+    }
+
+    // Update the countdown every 1 second
+    const timer = setInterval(countdown, 1000);
+
+  </script>
+</body>
+
+</html>
