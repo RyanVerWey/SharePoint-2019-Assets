@@ -53,4 +53,4 @@ The **SharePoint World Clock** is a customizable, visually appealing clock desig
 Contributions are welcome from anyone who has adapted the **SharePoint World Clock** for their unique SharePoint environment. If you’ve made adjustments or improvements to ensure compatibility, feel free to share your code snippets and solutions.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](https://opensource.org/osd) file for more details.
