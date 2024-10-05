@@ -24,7 +24,7 @@ The **SharePoint World Clock** is a customizable, visually appealing clock desig
 - **Clear Layout**: Displays multiple time zones in a clean and easy-to-read format, ensuring accessibility and efficiency for global teams.
 
 ## Screenshots
-![World Clock Screenshot](World Clock\WorldClockPreview.PNG)
+![World Clock Screenshot](https://github.com/RyanVerWey/SharePoint-2019-Assets/blob/main/World%20Clock/WorldClockPreview.PNG?raw=true)
 
 ## Setup
 1. **Add the Script Editor Web Part:**
